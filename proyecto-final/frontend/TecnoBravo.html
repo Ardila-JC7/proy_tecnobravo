@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TecnoBravo Store - Tienda de tecnología para estudiantes universitarios">
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>TecnoBravo Store | Tu tienda de tecnología</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#home" class="brand">
+                <img src="TecnoBravo.png" alt="Logo TecnoBravo Store" width="56" height="56">
+                <span class="brand-name">TecnoBravo Store</span>
+            </a>
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <a href="#home">Home</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#especificaciones">Especificaciones</a>
+                <a href="#promociones">Promociones</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#admin-panel">Pedidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar" aria-label="Menú lateral">
+            <h3>Navegación</h3>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#especificaciones">Especificaciones</a></li>
+                    <li><a href="#promociones">Promociones</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#indicadores">Indicadores</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#admin-panel">Gestión de pedidos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="contenido-principal">
+
+            <section id="home" class="hero">
+                <h1>TecnoBravo Store</h1>
+                <p class="tagline">Conecta, aprende, avanza</p>
+                <p class="hero-lead">Tu tienda de tecnología pensada para estudiantes: portátiles, accesorios y kits para que lleves tus proyectos al siguiente nivel.</p>
+            </section>
+
+            <section id="catalogo" class="card">
+                <h2>Catálogo de productos</h2>
+                <div id="productos" class="grid-productos"></div>
+            </section>
+
+            <section id="especificaciones" class="card">
+                <h2>Especificaciones técnicas</h2>
+                <dl class="specs">
+                    <div class="spec-group">
+                        <dt>Portátil gamer</dt>
+                        <dd>Procesador: Intel Core i7</dd>
+                        <dd>Memoria RAM: 16 GB DDR4</dd>
+                        <dd>Almacenamiento: 512 GB SSD</dd>
+                    </div>
+                    <div class="spec-group">
+                        <dt>Audífonos bluetooth</dt>
+                        <dd>Conectividad: Bluetooth 5.0</dd>
+                        <dd>Micrófono: Integrado</dd>
+                        <dd>Batería: 20 horas</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="promociones" class="card">
+                <h2>Top 5 productos más vendidos</h2>
+                <ol class="ranking">
+                    <li>Base refrigerante para portátil</li>
+                    <li>Mouse inalámbrico</li>
+                    <li>Teclado mecánico</li>
+                    <li>Kit arduino</li>
+                    <li>Disco SSD externo</li>
+                </ol>
+            </section>
+
+            <section id="categorias" class="card">
+                <h2>Categorías</h2>
+                <ul class="tag-list">
+                    <li>Computadores</li>
+                    <li>Accesorios</li>
+                    <li>Componentes</li>
+                    <li>Electrónica educativa</li>
+                </ul>
+            </section>
+
+            <section id="indicadores" class="card">
+                <h2>Indicadores de TecnoBravo Store</h2>
+                <div class="indicator">
+                    <p><strong>Stock producto estrella:</strong> Base refrigerante para portátil</p>
+                    <progress value="40" max="100">40%</progress>
+                    <span class="indicator-value">40%</span>
+                </div>
+                <div class="indicator">
+                    <p><strong>Satisfacción de clientes</strong></p>
+                    <meter value="4.5" min="0" max="5" low="2" high="4" optimum="5">4.5 / 5</meter>
+                    <span class="indicator-value">4.5 / 5</span>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Planes de garantía</h2>
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Duración</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Básico</td><td>6 meses</td><td>$50.000</td></tr>
+                            <tr><td>Pro</td><td>12 meses</td><td>$90.000</td></tr>
+                            <tr><td>Premium</td><td>24 meses</td><td>$150.000</td></tr>
+                        </tbody>
+                        <tfoot>
+                            <tr><td colspan="3">Los precios incluyen IVA</td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <section id="contacto" class="card">
+                <h2>Contacto y registro de pedido</h2>
+                <form id="contact-form" novalidate>
+                    <!-- Identificador del pedido en modo edición -->
+                    <input type="hidden" id="order-id" value="">
+
+                    <fieldset>
+                        <legend>Datos del cliente</legend>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="client-email">Correo electrónico</label>
+                                <input type="email" id="client-email" placeholder="ejemplo@correo.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="client-phone">Teléfono</label>
+                                <input type="tel" id="client-phone" placeholder="3001234567" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Detalles de la compra</legend>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="product-select">Producto de interés</label>
+                                <select id="product-select" required>
+                                    <option value="" disabled selected>Cargando productos...</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="payment-method">Método de pago</label>
+                                <select id="payment-method" required>
+                                    <option value="" disabled selected>Seleccione...</option>
+                                    <option value="Tarjeta">Tarjeta</option>
+                                    <option value="Transferencia">Transferencia</option>
+                                    <option value="Efectivo">Efectivo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="shipping-instructions">Instrucciones de envío</label>
+                            <textarea id="shipping-instructions" rows="3" placeholder="Ej: Carrera 57b #32-27. Dejar en portería." required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Registrar pedido</button>
+                        <button type="button" id="cancel-edit-btn" class="btn btn-ghost" hidden>Cancelar edición</button>
+                        <button type="reset" class="btn btn-secondary">Borrar datos</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="admin-panel" class="card">
+                <div class="panel-header">
+                    <h2>Panel de gestión de pedidos</h2>
+                    <span id="pedidos-count" class="badge">0 pedidos</span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Cliente</th>
+                                <th>Teléfono</th>
+                                <th>Producto</th>
+                                <th>Pago</th>
+                                <th>Instrucciones</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body"></tbody>
+                    </table>
+                </div>
+                <p id="empty-msg" class="empty-state">No hay pedidos registrados aún.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <section id="ayuda">
+                <h4>Ubicación</h4>
+                <address>
+                    Calle 73 No. 73A - 226<br>
+                    Medellín, Colombia<br>
+                    <a href="tel:+5744480520">PBX: (604) 448 0520</a><br>
+                    <a href="mailto:contacto@tecnobravo.com">contacto@tecnobravo.com</a>
+                </address>
+            </section>
+            <section>
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+                </div>
+            </section>
+            <section>
+                <h4>TecnoBravo Store</h4>
+                <p>Tienda académica de tecnología para la comunidad de la I.U. Pascual Bravo.</p>
+            </section>
+        </div>
+        <p class="copyright"><small>&copy; 2026 TecnoBravo Store. Todos los derechos reservados.</small></p>
+    </footer>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

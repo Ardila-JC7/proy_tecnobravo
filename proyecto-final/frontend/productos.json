@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Portátil gamer",                  "category": "Computadores" },
+    { "id": 2, "name": "Kit arduino",                     "category": "Electrónica educativa" },
+    { "id": 3, "name": "Audífonos bluetooth",             "category": "Accesorios" },
+    { "id": 4, "name": "Mouse inalámbrico",               "category": "Accesorios" },
+    { "id": 5, "name": "Teclado mecánico",                "category": "Accesorios" },
+    { "id": 6, "name": "Monitor full HD",                 "category": "Computadores" },
+    { "id": 7, "name": "Disco SSD externo",               "category": "Componentes" },
+    { "id": 8, "name": "Base refrigerante para portátil", "category": "Accesorios" }
+]
